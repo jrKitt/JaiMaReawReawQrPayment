@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/kittichai-macbook/Desktop/Labs/qrApp-Kittichai/app/layout\":[\"static/media/4833b3a93bc96c60-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
