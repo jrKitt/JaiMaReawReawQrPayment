@@ -1,4 +1,4 @@
-// File: /Users/kittichai-macbook/Desktop/Labs/qrApp-Kittichai/app/page.tsx
+// File: /Users/kittichai-macbook/DEV/JaiMaReawReawQrPayment/app/page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

@@ -17,6 +17,16 @@
       "static/chunks/main-app.js",
       "static/css/app/Contacts/page.css",
       "static/chunks/app/Contacts/page.js"
+    ],
+    "/History/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/History/page.js"
+    ],
+    "/_not-found/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }
