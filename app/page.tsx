@@ -48,7 +48,6 @@ export default function Home() {
     }
   }, []);
 
-  // Check if current number is saved
   useEffect(() => {
     setIsNumberSaved(savedNumbers.includes(mobile));
   }, [mobile, savedNumbers]);
