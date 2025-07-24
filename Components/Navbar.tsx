@@ -31,8 +31,8 @@ export default function Navbar() {
             จ่ายมาเร็วๆ
           </Link>
           
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-1">
+          {/* Desktop Menu - ซ่อนบนมือถือ */}
+          <div className="hidden sm:flex items-center space-x-1">
             <Link 
               href="/"
               className="flex items-center space-x-2 px-4 py-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
@@ -56,10 +56,10 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - แสดงเฉพาะมือถือ */}
           <button
             onClick={toggleMenu}
-            className="md:hidden p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
+            className="sm:hidden p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
@@ -70,9 +70,8 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-gray-100">
+          <div className="sm:hidden mt-4 pb-4 border-t border-gray-100">
             <div className="flex flex-col space-y-2 pt-4">
               <Link 
                 href="/"
