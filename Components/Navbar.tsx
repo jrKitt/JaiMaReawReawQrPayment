@@ -31,32 +31,7 @@ export default function Navbar() {
             จ่ายมาเร็วๆ
           </Link>
           
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex sm:hidden items-center space-x-1">
-            <Link 
-              href="/"
-              className="flex items-center space-x-2 px-4 py-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
-            >
-              <HomeRoundedIcon sx={{ fontSize: 20 }} />
-              <span>หน้าแรก</span>
-            </Link>
-            <Link 
-              href="/History"
-              className="flex items-center space-x-2 px-4 py-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
-            >
-              <HistoryIcon sx={{ fontSize: 20 }} />
-              <span>ประวัติ</span>
-            </Link>
-            <Link 
-              href="/Contacts"
-              className="flex items-center space-x-2 px-4 py-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
-            >
-              <MailRoundedIcon sx={{ fontSize: 20 }} />
-              <span>ติดต่อ</span>
-            </Link>
-          </div>
-
-          {/* Mobile Menu Button */}
+    
           <button
             onClick={toggleMenu}
             className="md:hidden p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
