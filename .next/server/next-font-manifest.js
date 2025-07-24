@@ -1,1 +1,0 @@
-self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/kittichai-macbook/DEV/JaiMaReawReawQrPayment/app/layout\":[\"static/media/bf360a7f3fae63a8-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
