@@ -31,8 +31,7 @@ export default function Navbar() {
             จ่ายมาเร็วๆ
           </Link>
           
-          {/* Desktop Menu - ซ่อนบนมือถือ */}
-          <div className="hidden sm:flex items-center space-x-1">
+          <div className="lg:flex hidden items-center space-x-1">
             <Link 
               href="/"
               className="flex items-center space-x-2 px-4 py-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
@@ -56,7 +55,6 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Mobile Menu Button - แสดงเฉพาะมือถือ */}
           <button
             onClick={toggleMenu}
             className="sm:hidden p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
