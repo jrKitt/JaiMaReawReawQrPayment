@@ -234,6 +234,7 @@ export default function Home() {
                     <div className="relative">
                       <input
                         type="number"
+                        min="1"
                         value={totalAmount}
                         onChange={totalAmountValue}
                         className="w-full p-3 pl-8 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-all bg-white"
