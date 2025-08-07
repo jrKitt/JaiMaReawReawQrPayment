@@ -1,6 +1,8 @@
 "use client";
 
 import react, { useState, useEffect } from "react";
+// @ts-ignore
+import Swal from "sweetalert2";
 import "./Styles/style.css";
 import QRcode from "qrcode";
 import generatePayload from "promptpay-qr";
@@ -22,7 +24,7 @@ export default function Home() {
   const [savedNumbers, setSavedNumbers] = useState<string[]>([]);
   const [isNumberSaved, setIsNumberSaved] = useState(false);
   const [totalAmount, setTotalAmount] = useState("");
-  const [peopleCount, setPeopleCount] = useState("");
+  const [peopleCount, setPeopleCount] = useState(0);
   const [isCalculatorMode, setIsCalculatorMode] = useState(false);
   const [showReceipt, setShowReceipt] = useState(false);
   const [receiptHistory, setReceiptHistory] = useState<any[]>([]);
@@ -66,17 +68,26 @@ export default function Home() {
     const { value } = event.target;
     setTotalAmount(value);
     if (value && peopleCount) {
-      const perPerson = parseFloat(value) / parseInt(peopleCount);
+      const perPerson = parseFloat(value) / parseInt(peopleCount.toString());
       setAmount(perPerson.toFixed(2));
     }
   };
 
   const peopleCountValue = (event: any) => {
     const { value } = event.target;
-    setPeopleCount(value);
-    // Auto calculate when both values are present
-    if (totalAmount && value) {
-      const perPerson = parseFloat(totalAmount) / parseInt(value);
+    const num = parseInt(value);
+    if (isNaN(num) || num < 1) {
+      Swal.fire({
+        icon: 'warning',
+        title: 'จำนวนคนต้องมากกว่า 0',
+        confirmButtonText: 'ตกลง',
+        confirmButtonColor: '#2563eb',
+      });
+      return;
+    }
+    setPeopleCount(num);
+    if (totalAmount && num) {
+      const perPerson = parseFloat(totalAmount) / num;
       setAmount(perPerson.toFixed(2));
     }
   };
@@ -85,7 +96,7 @@ export default function Home() {
     setIsCalculatorMode(!isCalculatorMode);
     if (!isCalculatorMode) {
       setTotalAmount("");
-      setPeopleCount("");
+      setPeopleCount(0);
     }
   };
 
@@ -238,7 +249,7 @@ export default function Home() {
                         value={totalAmount}
                         onChange={totalAmountValue}
                         className="w-full p-3 pl-8 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-all bg-white"
-                        placeholder="40 พจด้วง"
+                        placeholder="40 พดด้วง"
                       />
                       <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">₿</span>
                     </div>
@@ -262,10 +273,10 @@ export default function Home() {
                       <div className="text-center">
                         <p className="text-sm text-blue-600 mb-1">คนละ</p>
                         <p className="text-2xl font-bold text-blue-700">
-                          {(parseFloat(totalAmount) / parseInt(peopleCount)).toFixed(2)} บาท
+                          {(parseFloat(totalAmount) / parseInt(peopleCount.toString())).toFixed(2)} บาท
                         </p>
                         <p className="text-xs text-blue-500 mt-1">
-                          {totalAmount} ÷ {peopleCount} = {(parseFloat(totalAmount) / parseInt(peopleCount)).toFixed(2)}
+                          {totalAmount} ÷ {peopleCount} = {(parseFloat(totalAmount) / parseInt(peopleCount.toString())).toFixed(2)}
                         </p>
                       </div>
                     </div>

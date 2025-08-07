@@ -1,0 +1,100 @@
+/*!******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./app/Styles/style.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************/
+.qr-code {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qr-code svg {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 256px;
+    max-height: 256px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.qr-code-small {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+}
+
+.qr-code-small svg {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Smooth transitions */
+.transition-all {
+    transition: all 0.2s ease-in-out;
+}
+
+/* Modal backdrop animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-backdrop {
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content {
+    animation: slideUp 0.3s ease-out;
+}
+
+/* Receipt print styles */
+@media print {
+    .modal-backdrop {
+        background: white !important;
+        position: static !important;
+    }
+    
+    .modal-content {
+        box-shadow: none !important;
+        border: 1px solid #000 !important;
+    }
+    
+    button {
+        display: none !important;
+    }
+}
+
+/* Custom scrollbar for saved numbers */
+.saved-numbers-container::-webkit-scrollbar {
+    width: 4px;
+}
+
+.saved-numbers-container::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 2px;
+}
+
+.saved-numbers-container::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 2px;
+}
+
+.saved-numbers-container::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
