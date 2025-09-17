@@ -1,7 +1,6 @@
 # JaiMaReawReawQrPayment
 
 A Next.js web application for generating and displaying PromptPay QR codes for payment processing. This application is designed for shops, businesses, and individuals who want to accept payments through Thailand's PromptPay system.
-
 ## Live Demo
 
 Visit the live application at: [https://jmrr.jrkitt.com/](https://jmrr.jrkitt.com/)
